@@ -8,13 +8,17 @@ module.exports = {
         ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main_bundle.js'
+        filename: 'main_bundle.js',
+        publicPath: "/"
     },
     module: {
         rules: [
             { test: /\.(js)$/, use: 'babel-loader' },
             { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
         ]
+    },
+    devServer: {
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({
