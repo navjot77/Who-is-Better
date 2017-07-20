@@ -1,3 +1,28 @@
 body{
     background-color: darkkhaki;
+    font-family: "sans-serif";
+}
+.container{
+    max-width:1200px;
+    margin: 0 auto
+}
+ul.popular__tags{
+    display: flex;
+    justify-content: center;
+
+    margin:10em 0em;
+
+}
+ul li{
+    padding:2em;
+    font-size: 1.5em;
+    list-style-type: none;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+
+    transition: font-size 0.2s;
+}
+ul li:hover{
+
+    font-size:2em
 }
