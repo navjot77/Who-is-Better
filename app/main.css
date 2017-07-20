@@ -13,7 +13,7 @@ ul.popular__tags{
     margin:10em 0em;
 
 }
-ul li{
+ul.popular__tags li{
     padding:2em;
     font-size: 1.5em;
     list-style-type: none;
@@ -22,7 +22,27 @@ ul li{
 
     transition: font-size 0.2s;
 }
-ul li:hover{
+ul.popular__tags li:hover{
 
-    font-size:2em
+    font-size:1.7em
+}
+.popular__details_tags{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.popular__details_image{
+    width: 7em;
+
+}
+.popular__details_ranking{
+    text-align: center;
+    font-size: 2em;
+}
+.popular__details_item{
+    margin:3em;
+    list-style-type: none;
+}
+.popular__details_details{
+    list-style-type: none;
 }

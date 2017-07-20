@@ -2,7 +2,10 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './app/main.js',
+    entry: [
+        'babel-polyfill',
+        './app/main.js'
+        ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main_bundle.js'
