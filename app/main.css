@@ -72,11 +72,11 @@ a{
 }
 .button{
     padding:1em;
-    margin:auto;
-    display: block;
+    margin:2em;
+
     width: 7em;
-    height: 2.5em;
-    background-color: black;
+
+    background-color: darkblue;
     transform:scaleX(1);
     color:white;
     transition: transform color 1s ease-in;
@@ -85,4 +85,14 @@ a{
 .button:hover{
     transform:scaleX(1.3);
     color:red;
+}
+.battle__main{
+    color:cornflowerblue;
+    display: flex;
+    justify-content: space-around;
+
+}
+.battle__form{
+    display: flex;
+    flex-direction: column;
 }
