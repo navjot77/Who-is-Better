@@ -28,9 +28,9 @@ class InputForm extends React.Component{
     render(){
         return(
             <div >
-            <h1>Player {this.props.label}</h1>
+            <h1 id="labelId">Player {this.props.label}</h1>
             <form className="battle__form" onSubmit={this.submitForm}>
-                <input id='username' type="text" value={this.state.userName} placeholder="Type your Github Name"
+                <input id='username' autoComplete='off' type="text" value={this.state.userName} placeholder="Type your Github Name"
                 onChange={this.inputChanged} />
                 <button  type="submit" className="button"> SUBMIT</button>
             </form>
@@ -42,7 +42,20 @@ class InputForm extends React.Component{
 
 }
 
+function ViewDetails(props){
+return(
+    <div className="battle__form">
+        <img className="popular__details_image" src={props.image} alt={'Image for'+ props.name} />
+        <h3 id="labelId">@{props.name}</h3>
+        <button className='reset' onClick={props.resetButton.bind(null,props.id)}>Reset</button>
 
+    </div>
+
+
+
+);
+
+}
 
 
 class Battle extends React.Component{
@@ -56,6 +69,17 @@ class Battle extends React.Component{
             imageTwo:''
         };
         this.submitButton=this.submitButton.bind(this);
+        this.handleReset=this.handleReset.bind(this);
+    }
+    handleReset(id){
+        this.setState(function(){
+            const newState={};
+            newState[`username${id}`]='';
+            newState[`image${id}`]='';
+            return newState;
+        });
+
+
     }
     submitButton(id, name){
         this.setState(function(){
@@ -70,25 +94,45 @@ class Battle extends React.Component{
         const usernameOne=this.state.usernameOne;
         const usernameTwo=this.state.usernameTwo;
         return(
+            <div>
             <div className="battle__main">
-                {usernameOne ? <h1>In progress</h1> : <InputForm name={usernameOne}
-                label="One"
-                submitButton={this.submitButton}
-                />}
+                {usernameOne ?
+                    <ViewDetails
+                             id="One"
+                             image={this.state.imageOne}
+                             resetButton={this.handleReset}
+                            name={this.state.usernameOne}/>
+                    : <InputForm name={usernameOne}
+                                label="One"
+                                submitButton={this.submitButton}
+                                />}
 
-                {!usernameTwo &&
-                <InputForm
-                    name={usernameTwo}
-                    label="Two"
-                    submitButton={this.submitButton}
-                />}
+                {usernameTwo ? <ViewDetails
+                    id="Two"
+                    image={this.state.imageTwo}
+                    resetButton={this.handleReset}
+                    name={this.state.usernameTwo}/>
+                    : <InputForm name={usernameTwo}
+                                 label="Two"
+                                 submitButton={this.submitButton}
+                    />}
 
 
             </div>
 
+                {usernameTwo && usernameOne && <Link className='button battle__main'
+                                                     to={
+                                                         {pathname:this.props.match.url+'results/',
+                                                             search:'?usernameOne='+usernameOne+'usernameTwo='+usernameTwo}
+                                                     }>
+                    Start Battle
+                </Link>
+                }
+
+            </div>
 
         );
     }
-};
+}
 
 export default Battle;
