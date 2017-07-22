@@ -115,7 +115,7 @@ class Battle extends React.Component{
                 {usernameTwo && usernameOne && <Link className='button battle__main'
                                                      to={
                                                          {pathname:this.props.match.url+'/results',
-                                                             search:'?usernameOne='+usernameOne+'usernameTwo='+usernameTwo}
+                                                             search:'?usernameOne='+usernameOne+'&usernameTwo='+usernameTwo}
                                                      }>
                     Start Battle
                 </Link>

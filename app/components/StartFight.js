@@ -2,6 +2,7 @@ const React=require('react');
 import {getResultss} from '../utils/git';
 const queryString=require('query-string');
 import ViewDetails from './ViewDetails';
+import Loading from './Loading';
 
 function Players(props){
     const info=props.player.profile;
@@ -46,10 +47,11 @@ class StartFight extends React.Component{
     }
 
      async componentDidMount(){
+        console.log('hello')
         try {
             const {usernameOne, usernameTwo} = queryString.parse(this.props.location.search);
-            // console.log(usernameOne,usernameTwo)
             const [winner, looser] = await getResultss(usernameOne, usernameTwo);
+
             this.setState(function(){
                 return(
                     {
@@ -84,15 +86,13 @@ class StartFight extends React.Component{
 
 
     render(){
-
-console.log(this.state.winner)
         return(
             <div className="battle__main">
-            {this.state.loading ? <h2>Wait while we fetch the data....</h2> :
+            {this.state.loading ? <Loading value="Loading"/>:
             <Players player={this.state.winner} label="Winner"/>
             }
 
-            {this.state.loading ? <h2>Wait while we fetch the data....</h2> :
+            {this.state.loading ? '':
                     <Players player={this.state.looser} label="Looser"/>
             }
 
