@@ -30,33 +30,39 @@ function sortUsers(a,b){
 
 
 const getResult=async (user1,user2)=>{
-    const [repos1,repos2]= await Promise.all([getRepo(user1),getRepo(user2)]);
-    const [total1, total2]=await Promise.all([addStars(repos1),addStars(repos2)]);
-    const [profile1,profile2]=await Promise.all([getProfile(user1),getProfile(user2)]);
-    const playerOne={
-        total:total1,
-        profile:profile1
-    };
-    const playerTwo={
-        total:total2,
-        profile:profile2
-    };
-    const players=[playerOne,playerTwo];
-    return players.sort(sortUsers);
+
+    try {
+        const [repos1, repos2] = await Promise.all([getRepo(user1), getRepo(user2)]);
+        const [total1, total2] = await Promise.all([addStars(repos1), addStars(repos2)]);
+        const [profile1, profile2] = await Promise.all([getProfile(user1), getProfile(user2)]);
+        const playerOne = {
+            total: total1,
+            profile: profile1
+        };
+        const playerTwo = {
+            total: total2,
+            profile: profile2
+        };
+        const players = [playerOne, playerTwo];
+        return players.sort(sortUsers);
+    }
+    catch(e){
+        return e;
+    }
 
 };
 
-const getResultss=async()=> {
 
-    console.log(await getResult('mjackson', 'tylermcginnis'));
-};
-getResultss();
 
 
 
 module.exports={
 
 
+    async getResultss(player1,player2){
+
+        return await getResult(player1, player2);
+    },
 
 
 

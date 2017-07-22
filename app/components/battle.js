@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-
+import ViewDetails from './ViewDetails';
 
 class InputForm extends React.Component{
     constructor(props){
@@ -30,7 +30,7 @@ class InputForm extends React.Component{
             <div >
             <h1 id="labelId">Player {this.props.label}</h1>
             <form className="battle__form" onSubmit={this.submitForm}>
-                <input id='username' autoComplete='off' type="text" value={this.state.userName} placeholder="Type your Github Name"
+                <input id='username' autoComplete='off' type="text" value={this.state.userName} placeholder="Enter Github Name"
                 onChange={this.inputChanged} />
                 <button  type="submit" className="button"> SUBMIT</button>
             </form>
@@ -42,20 +42,6 @@ class InputForm extends React.Component{
 
 }
 
-function ViewDetails(props){
-return(
-    <div className="battle__form">
-        <img className="popular__details_image" src={props.image} alt={'Image for'+ props.name} />
-        <h3 id="labelId">@{props.name}</h3>
-        <button className='reset' onClick={props.resetButton.bind(null,props.id)}>Reset</button>
-
-    </div>
-
-
-
-);
-
-}
 
 
 class Battle extends React.Component{
@@ -101,7 +87,10 @@ class Battle extends React.Component{
                              id="One"
                              image={this.state.imageOne}
                              resetButton={this.handleReset}
-                            name={this.state.usernameOne}/>
+                            name={this.state.usernameOne}>
+                    <button className='reset' onClick={this.handleReset.bind(null,'One')}>Reset</button>
+
+                    </ViewDetails>
                     : <InputForm name={usernameOne}
                                 label="One"
                                 submitButton={this.submitButton}
@@ -111,8 +100,11 @@ class Battle extends React.Component{
                     id="Two"
                     image={this.state.imageTwo}
                     resetButton={this.handleReset}
-                    name={this.state.usernameTwo}/>
-                    : <InputForm name={usernameTwo}
+                    name={this.state.usernameTwo}>
+                    <button className='reset' onClick={this.handleReset.bind(null,'Two')}>Reset</button>
+
+                    </ViewDetails>
+                     : <InputForm name={usernameTwo}
                                  label="Two"
                                  submitButton={this.submitButton}
                     />}

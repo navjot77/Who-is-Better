@@ -40,7 +40,7 @@ function Details(props){
                            <div className="popular__details_ranking">
                              #{index+1}
                             </div>
-                           <ul className="popular__details_details">
+                           <ul className="popular__details_item">
                                <li>
                                    <img className="popular__details_image" src={repo.owner.avatar_url} alt={'Image for'+ repo.name} />
                                </li>

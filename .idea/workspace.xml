@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee95c287-3691-4af2-8905-3f7fb504a6fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/StartFight.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/App.js" afterPath="$PROJECT_DIR$/app/components/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/StartFight.js" afterPath="$PROJECT_DIR$/app/components/StartFight.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/battle.js" afterPath="$PROJECT_DIR$/app/components/battle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/popular.js" afterPath="$PROJECT_DIR$/app/components/popular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main.css" afterPath="$PROJECT_DIR$/app/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/git.js" afterPath="$PROJECT_DIR$/app/utils/git.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,31 +40,31 @@
           <file leaf-file-name="StartFight.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/StartFight.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+                <state relative-caret-position="390">
+                  <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="git.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/utils/git.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="62">
-                  <caret line="46" column="2" lean-forward="true" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="battle.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="battle.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/components/battle.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="124" column="90" lean-forward="false" selection-start-line="124" selection-start-column="90" selection-end-line="124" selection-end-column="90" />
+                <state relative-caret-position="480">
+                  <caret line="32" column="115" lean-forward="false" selection-start-line="32" selection-start-column="115" selection-end-line="32" selection-end-column="115" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="git.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/utils/git.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="915">
+                  <caret line="61" column="10" lean-forward="false" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -74,8 +76,8 @@
           <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-70">
-                  <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+                <state relative-caret-position="74">
+                  <caret line="90" column="15" lean-forward="false" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
@@ -108,15 +110,17 @@
         <option value="$PROJECT_DIR$/app/main.html" />
         <option value="$PROJECT_DIR$/app/main.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/components/popular.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/app/components/nav.js" />
         <option value="$PROJECT_DIR$/app/components/home.js" />
+        <option value="$PROJECT_DIR$/app/components/App.js" />
+        <option value="$PROJECT_DIR$/app/components/ViewDetail.js" />
+        <option value="$PROJECT_DIR$/app/utils/git.js" />
+        <option value="$PROJECT_DIR$/app/components/ViewDetails.js" />
+        <option value="$PROJECT_DIR$/app/components/StartFight.js" />
+        <option value="$PROJECT_DIR$/app/components/popular.js" />
         <option value="$PROJECT_DIR$/app/main.css" />
         <option value="$PROJECT_DIR$/app/components/battle.js" />
-        <option value="$PROJECT_DIR$/app/components/App.js" />
-        <option value="$PROJECT_DIR$/app/components/StartFight.js" />
-        <option value="$PROJECT_DIR$/app/utils/git.js" />
       </list>
     </option>
   </component>
@@ -319,12 +323,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500489647822</updated>
-      <workItem from="1500489648979" duration="30146000" />
+      <workItem from="1500489648979" duration="34006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30146000" />
+    <option name="totallyTimeSpent" value="34006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="939" height="900" extended-state="0" />
@@ -427,32 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/popular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/battle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="124" column="90" lean-forward="false" selection-start-line="124" selection-start-column="90" selection-end-line="124" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -463,19 +441,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/StartFight.js">
+    <entry file="file://$PROJECT_DIR$/app/components/ViewDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/popular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="42" column="63" lean-forward="false" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/utils/git.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="46" column="2" lean-forward="true" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+        <state relative-caret-position="915">
+          <caret line="61" column="10" lean-forward="false" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/StartFight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="90" column="15" lean-forward="false" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/battle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="115" lean-forward="false" selection-start-line="32" selection-start-column="115" selection-end-line="32" selection-end-column="115" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
