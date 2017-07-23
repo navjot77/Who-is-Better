@@ -4,7 +4,10 @@
   "description": "A simple game using React framework",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV='production' webpack -p",
+    "deploy": "npm run build && firebase deploy",
+    "firebase-init": "firebase login && firebase init"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
@@ -16,6 +19,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-3": "^6.24.1",
     "css-loader": "^0.27.3",
+    "firebase-tools": "^3.9.1",
     "html-webpack-plugin": "^2.28.0",
     "query-string": "^4.3.4",
     "react-router-dom": "^4.1.2",
